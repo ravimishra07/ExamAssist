@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">ExamAssist</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_onboarding">OnboardingActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="start">Start</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+
+    <string name="slide_1_title">Get Quality Notes</string>
+    <string name="slide_1_desc">Notes made by students, for students</string>
+
+    <string name="slide_2_title">Get previous year papers</string>
+    <string name="slide_2_desc">Old questions papers of your College/University</string>
+
+    <string name="slide_3_title">Quick access to syllabus</string>
+    <string name="slide_3_desc">Refer subject syllabus with one touch </string>
+
+    <!-- Strings used for fragments for navigation -->
+
+    <string name="logout">Logout</string>
+    <string name="login_text">Login Here</string>
+    <string name="guest">Guest user</string>
+    <string name="view_all_btn_text">View All</string>
+</resources>
