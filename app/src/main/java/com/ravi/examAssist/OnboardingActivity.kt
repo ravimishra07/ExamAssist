@@ -88,11 +88,7 @@ class OnboardingActivity : AppCompatActivity() {
         if (dots.size > 0) dots[currentPage]!!.setTextColor(colorsActive[currentPage])
     }
 
-    private fun launchHomeScreen() {
-        prefManager!!.isFirstTimeLaunch = false
-        startActivity(Intent(this, MainActivity::class.java))
-        finish()
-    }
+
 
     //  viewpager change listener
     var viewPagerPageChangeListener: ViewPager.OnPageChangeListener = object : ViewPager.OnPageChangeListener {
@@ -125,7 +121,11 @@ class OnboardingActivity : AppCompatActivity() {
             window.statusBarColor = Color.TRANSPARENT
         }
     }
-
+    private fun launchHomeScreen() {
+        prefManager!!.isFirstTimeLaunch = false
+        startActivity(Intent(this, MainActivity::class.java))
+        finish()
+    }
     /**
      * View pager adapter
      */
