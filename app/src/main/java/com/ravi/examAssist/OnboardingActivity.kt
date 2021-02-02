@@ -68,6 +68,11 @@ class OnboardingActivity : AppCompatActivity() {
 
 
     }
+
+    private fun getItem(i: Int): Int {
+        return view_pager!!.currentItem + i
+    }
+
     private fun addBottomDots(currentPage: Int) {
         dots = arrayOfNulls(layouts.size)
         val colorsActive = resources.getIntArray(R.array.array_dot_active)
@@ -83,25 +88,12 @@ class OnboardingActivity : AppCompatActivity() {
         if (dots.size > 0) dots[currentPage]!!.setTextColor(colorsActive[currentPage])
     }
 
-    private fun getItem(i: Int): Int {
-        return view_pager!!.currentItem + i
-    }
-
     private fun launchHomeScreen() {
         prefManager!!.isFirstTimeLaunch = false
         startActivity(Intent(this, MainActivity::class.java))
         finish()
     }
-    /**
-     * Making notification bar transparent
-     */
-    private fun changeStatusBarColor() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            val window = window
-            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
-            window.statusBarColor = Color.TRANSPARENT
-        }
-    }
+
     //  viewpager change listener
     var viewPagerPageChangeListener: ViewPager.OnPageChangeListener = object : ViewPager.OnPageChangeListener {
         override fun onPageSelected(position: Int) {
@@ -123,7 +115,16 @@ class OnboardingActivity : AppCompatActivity() {
         override fun onPageScrollStateChanged(arg0: Int) {}
     }
 
-
+    /**
+     * Making notification bar transparent
+     */
+    private fun changeStatusBarColor() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            val window = window
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+            window.statusBarColor = Color.TRANSPARENT
+        }
+    }
 
     /**
      * View pager adapter
