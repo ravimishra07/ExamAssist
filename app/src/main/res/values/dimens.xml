@@ -27,4 +27,6 @@
     <dimen name="standard_icon_padding">9dp</dimen>
     <dimen name="view_all_text_size">12sp</dimen>
     <dimen name="round_corner_radii">24dp</dimen>
+    <dimen name="nav_header_height">100dp</dimen>
+    <dimen name="nav_header_vertical_spacing">100dp</dimen>
 </resources>

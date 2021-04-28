@@ -30,4 +30,10 @@
     <string name="login_text">Login Here</string>
     <string name="guest">Guest user</string>
     <string name="view_all_btn_text">View All</string>
+    <string name="nav_header_desc">main</string>
+    <string name="nav_header_title">title</string>
+    <string name="nav_header_subtitle">sub title</string>
+    <string name="menu_home">title</string>
+    <string name="menu_gallery">gallery</string>
+    <string name="menu_slideshow">main</string>
 </resources>
