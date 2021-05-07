@@ -17,17 +17,11 @@ import com.ravi.examAssist.MainActivity
 import com.ravi.examAssist.R
 import com.ravi.examAssist.ui.dashboard.DashboardFragment
 import com.ravi.examAssist.ui.notifications.NotificationsFragment
+import kotlinx.android.synthetic.main.activity_base.*
+import kotlinx.android.synthetic.main.base_layout.*
 
 
 open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
-
-    var drawerLayout: DrawerLayout? = null
-    var toolbar: Toolbar? = null
-    var frameLayout: FrameLayout? = null
-    var navigationView: NavigationView? = null
-    var userLoginImg: ImageView? = null
-    var userName: TextView? = null
-    var userEmail: TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,37 +30,24 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
     }
 
     private fun init() {
-        toolbar = findViewById(R.id.toolbar)
-        toolbar!!.setTitleTextColor(resources.getColor(R.color.white))
+        toolbar.setTitleTextColor(resources.getColor(R.color.white))
         setSupportActionBar(toolbar)
-        frameLayout = findViewById(R.id.content_frame)
-        drawerLayout = findViewById(R.id.drawer_layout)
         val toggle = ActionBarDrawerToggle(
             this,
-            drawerLayout,
+            drawer_layout,
             toolbar,
             R.string.navigation_drawer_open,
             R.string.navigation_drawer_close
         )
-        drawerLayout!!.setDrawerListener(toggle)
-        //        toggle.setHomeAsUpIndicator(R.drawable.ic_setting);
+        drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
-        navigationView = findViewById<View>(R.id.nav_view) as NavigationView
-        val header = navigationView!!.getHeaderView(0)
-        userLoginImg = header.findViewById(R.id.userLoginImg)
-        userName = header.findViewById(R.id.userName)
-        userEmail = header.findViewById(R.id.userEmail)
-
-//        Glide.with(getApplicationContext()).load(sharedPreference_main.getUserImage()).placeholder(R.drawable.user_icon).into(userLoginImg);
-//        userName.setText(sharedPreference_main.getUsername());
-//        userEmail.setText(sharedPreference_main.getUserEmail());
-
-        navigationView!!.setNavigationItemSelectedListener(this)
+        val header = nav_view.getHeaderView(0)
+        nav_view.setNavigationItemSelectedListener(this)
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         if (item.isChecked) {
-            drawerLayout!!.closeDrawer(GravityCompat.START)
+            drawer_layout.closeDrawer(GravityCompat.START)
             return true
         }
         when (item.itemId) {
@@ -75,15 +56,14 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
                 startActivity(intent)
             }
-
-            else -> drawerLayout!!.closeDrawer(GravityCompat.START)
+            else -> drawer_layout.closeDrawer(GravityCompat.START)
         }
         return true
     }
 
     override fun onBackPressed() {
-        if (drawerLayout!!.isDrawerOpen(GravityCompat.START)) {
-            drawerLayout!!.closeDrawer(GravityCompat.START)
+        if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
+            drawer_layout.closeDrawer(GravityCompat.START)
         } else {
             super.onBackPressed()
         }
