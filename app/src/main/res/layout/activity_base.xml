@@ -7,8 +7,6 @@
     android:id="@+id/drawer_layout"
     tools:context=".Activity.BaseActivity">
 
-
-
     <include
         layout="@layout/base_layout"
         android:layout_width="match_parent"

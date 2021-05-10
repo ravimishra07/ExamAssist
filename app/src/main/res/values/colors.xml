@@ -10,11 +10,16 @@
     <color name="color_primary_dark">#D4E814</color>
     <color name="secondary_color">#E76F51</color>
     <color name="secondary_color_dark">#D7431D</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
     <color name="theem">#ACED60</color>
     <color name="grey">#DCDDDB</color>
     <color name="colorPrimary">#D4E814</color>
+    <color name="porpole">#ba53de</color>
+    <color name="pink">#f469a9</color>
+    <color name="blue">#88bef5</color>
+
+
 
 
     <!-- Screens background color-->
@@ -49,5 +54,10 @@
         <item>@color/dot_dark_screen3</item>
         <item>@color/dot_dark_screen4</item>
     </array>
+
+
+
+
+
 
 </resources>

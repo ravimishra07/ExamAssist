@@ -41,15 +41,9 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
         setSupportActionBar(toolbar)
         frameLayout = findViewById(R.id.content_frame)
         drawerLayout = findViewById(R.id.drawer_layout)
-        val toggle = ActionBarDrawerToggle(
-            this,
-            drawerLayout,
-            toolbar,
-            R.string.navigation_drawer_open,
-            R.string.navigation_drawer_close
-        )
+        val toggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
         drawerLayout!!.setDrawerListener(toggle)
-        //        toggle.setHomeAsUpIndicator(R.drawable.ic_setting);
+        // toggle.setHomeAsUpIndicator(R.drawable.ic_setting);
         toggle.syncState()
         navigationView = findViewById<View>(R.id.nav_view) as NavigationView
         val header = navigationView!!.getHeaderView(0)
