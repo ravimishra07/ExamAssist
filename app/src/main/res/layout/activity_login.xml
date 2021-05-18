@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activity.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp">
+
+                <ImageView
+                    android:id="@+id/img_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@color/dot_light_screen1">
+
+                </ImageView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_125sdp"
+                android:background="@drawable/bottom_sheet_background"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="1"
+                    android:layout_marginTop="@dimen/_22sdp">
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tabLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".1"/>
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/viewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".7">
+
+                    </androidx.viewpager.widget.ViewPager>
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="0dp"
+                      android:orientation="horizontal"
+                      android:layout_gravity="center"
+                      android:gravity="center"
+                      android:layout_weight=".2">
+
+
+                      <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+                          android:id="@+id/google"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:backgroundTint="@color/white"
+                          android:src="@drawable/ic_google"/>
+
+                      <com.google.android.material.floatingactionbutton.FloatingActionButton
+                          android:id="@+id/fb"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:backgroundTint="@color/white"
+                          android:layout_marginLeft="20dp"
+                          android:layout_marginRight="20dp"
+
+                          android:src="@drawable/ic_facebook"/>
+
+                      <com.google.android.material.floatingactionbutton.FloatingActionButton
+                          android:id="@+id/twitter"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:backgroundTint="@color/white"
+                          android:src="@drawable/ic_twitter"/>
+
+
+
+                  </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

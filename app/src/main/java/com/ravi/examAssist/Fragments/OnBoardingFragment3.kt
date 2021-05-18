@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
+import com.ravi.examAssist.Activity.LoginActivity
 import com.ravi.examAssist.MainActivity
 import com.ravi.examAssist.R
 
@@ -26,7 +27,7 @@ class OnBoardingFragment3 : Fragment() {
 
 
         move_to_MainActivityLayout!!.setOnClickListener(View.OnClickListener {
-            val intent = Intent(context, MainActivity::class.java)
+            val intent = Intent(context, LoginActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
             startActivity(intent)
         })
