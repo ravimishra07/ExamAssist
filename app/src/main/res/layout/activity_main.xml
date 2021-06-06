@@ -38,9 +38,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_person"
-        android:backgroundTint="@color/theem"
+        android:backgroundTint="@color/theme"
         app:layout_anchor="@id/bottomAppBar"
-        app:backgroundTint="@color/theem"
-        app:rippleColor="@color/theem"/>
+        app:backgroundTint="@color/theme"
+        app:rippleColor="@color/theme"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
